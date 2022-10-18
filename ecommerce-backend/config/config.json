@@ -1,0 +1,10 @@
+{
+  "development": {
+    "PORT": 1000,
+    "MongodbUrl": "mongodb://localhost:27017/ecommerce"
+  },
+  "production": {
+    "PORT": 80,
+    "Mongodb_Url": "mongodb://xxxxx/DB_Name"
+}
+}
