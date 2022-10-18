@@ -1,0 +1,54 @@
+<div class=""row px-xl-5>
+  <div class="col-lg-7 mb-5">
+    <div class="login-form bg-light p-30">
+      <div id="success"></div>
+
+      <form [formGroup]="loginForm" >
+        <h3 style="color: #24262b">Name</h3>
+        <div class="control-group">
+          <input
+          type="text"
+          class="form-control"
+          placeholder="Your Name"
+          required="required"
+          formControlName="name"
+          />
+          <p *ngIf="loginForm.controls['name'].errors" class="text-warning">
+            Please enter your name
+          </p>
+        </div>
+        <div class="control-group"><h3 style="color: #24262b">Email</h3>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Your email"
+            required="required"
+            formControlName="email"
+          />
+          <p *ngIf="loginForm.controls['email'].errors"
+             class="text-warning">
+            Please enter your email
+          </p>
+
+        </div>
+
+        <div class="control-group">
+          <h3 style="color: #24262b">Password</h3>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Your password"
+            required="required"
+            formControlName="password"
+          />
+          <p *ngIf="loginForm.controls['password'].errors"
+             class="text-warning">
+            Please enter your password
+          </p>
+          <button routerLink="/cart" class=" btn btn-warning">Log in </button>
+        </div>
+      </form>
+
+  </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="card-top container fluid">
+  <div class="container d-flex">
+    <div class="item">
+      <a routerLink="/login" style="text-decoration: none orange">
+        <img style="width: 80px" height="70px" src="assets/products.jfif" alt="">
+        <h6>All Products</h6>
+      </a>
+    </div>
+
+    <div class="item">
+      <a routerLink="/login" style="text-decoration: none orange">
+        <img style="width: 80px" height="70px" src="assets/offers2.jfif" alt="">
+        <h6>Latest</h6>
+      </a>
+    </div>
+
+    <div class="item" >
+      <a routerLink="/login" style="text-decoration: none orange">
+        <img style="width: 80px" height="70px" src="assets/offers(1).jfif" alt="">
+        <h6 >Offers</h6>
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let item of productList"> <!--ProductList coming from product.ts-->
+      <div class="card col-md-3">
+        <img src="{{item.image}}" alt="">
+        <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5> <!--title is already defined in link of api-->
+        <p  style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+        <p><strong>Price:</strong>{{item.price}}</p>
+        <button class="btn btn-warning" (click)="addToCart(item)"> Add to Cart</button>
+      </div>
+    </ng-container>
+
+  </div>
+</div>
